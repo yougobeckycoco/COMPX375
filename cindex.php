@@ -20,6 +20,21 @@
 <div id="main">
 	
 	<h1>Welcome, first last</h1>
+
+	<form action="csearchresults.php" method="POST">
+
+		<input type="text" name="destination" id="destination" placeholder="Enter destination">
+		<label for="checkin">Check in date</label>
+		<input type="date" name="checkin" id="checkin">
+		<label for="checkout">Check out date</label>
+		<input type="date" name="checkout" id="checkout">
+
+		<button>Search</button>
+
+	</form>
+
+	<h1>Current reservations</h1>
+	<p>None</p>
 </div>
 
 </body>
