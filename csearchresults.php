@@ -7,5 +7,7 @@
 </head>
 <body>
 
+	<?php require 'partials/nav.php'; ?>
+
 </body>
 </html>

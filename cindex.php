@@ -8,15 +8,8 @@
 </head>
 <body>
 
-<div id="topbar">
-	
-	<a href="cindex.php">Home</a>
-	<a href="csearch.php">Reservations</a>
-	<a href="#">Messaging</a>
-	<a href="#">My Information</a>
+<?php require 'partials/nav.php'; ?>
 
-	<button>Log out</button>
-</div>
 <div id="main">
 	
 	<h1>Welcome, first last</h1>
