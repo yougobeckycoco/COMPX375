@@ -23,6 +23,7 @@ require 'includes/config.php';
 		
 		
 	</div>
+	<div id="main"></div>
 
 </body>
 </html>
