@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap');
+
+* {
+	box-sizing: border-box;
+	object-fit: cover;
+	background-size: cover;
+}
+
+body {
+	--white:  255, 255, 255;
+	--black:  0, 0, 0;
+	--darkgrey:  34, 34, 34;
+
+	--font1:  'Open Sans', sans-serif;
+
+	font:  400 13px/120% var(--font1);
+}
+
+#main {
+	width:  60%;
+	padding:  50px;
+	margin:  20px auto;
+	border:  1px solid rgba(var(--darkgrey), .7);
+}
