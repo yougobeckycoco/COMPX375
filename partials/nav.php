@@ -5,5 +5,5 @@
 	<a href="#">Messaging</a>
 	<a href="#">My Information</a>
 
-	<button>Log out</button>
+	<a href="clogout.php">Log out</a>
 </div>
