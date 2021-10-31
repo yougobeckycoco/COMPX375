@@ -8,6 +8,5 @@ $user = 'root';
 $pass = 'root';
 $database = 'newland';
 
+
 $dbh = connectDatabase($host, $database, $user, $pass);
-
-
