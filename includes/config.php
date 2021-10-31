@@ -6,6 +6,6 @@ require 'includes/functions.php';
 $host = 'localhost';
 $user = 'root';
 $pass = 'root';
-$database = 'dbname';
+$database = 'newland';
 
 $dbh = connectDatabase($host, $database, $user, $pass);
