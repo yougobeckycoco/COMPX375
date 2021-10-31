@@ -50,3 +50,26 @@ function showMessage($type = null) {
   }
   return $messages;
 }
+
+function getAdmin($dbh, $username) {
+  $sth = $dbh->prepare('SELECT * FROM user WHERE username = :username LIMIT 1');
+  $sth->bindValue(':username', $username, PDO::PARAM_STR);
+  $sth->execute();
+  $row = $sth->fetch();
+  if (!empty($row)) {
+    return $row;
+}
+  }
+  return false;
+
+function searchClient($dbh, $search) {
+  $sth = $dbh->prepare("SELECT * FROM user WHERE lname OR fname LIKE :search");
+  $sth->bindValue(':search', '%' . $search . '%', PDO::PARAM_STR);
+  $sth->execute();
+  $result = $sth->fetchAll();
+  return $result;
+}
+
+function e($value) {
+  return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+}

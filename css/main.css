@@ -17,7 +17,7 @@ body {
 }
 
 #main {
-	width:  60%;
+	width:  80%;
 	padding:  50px;
 	margin:  20px auto;
 	border:  1px solid rgba(var(--darkgrey), .7);
