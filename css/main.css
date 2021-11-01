@@ -25,11 +25,11 @@ body {
 
 a, a:link, a:active, a:visited, a:hover {
 	color:  rgba(var(--black), 1);
-	text-decoration: none;
+	cursor: crosshair;
 }
 
 #main {
-	width:  90%;
+	width:  75%;
 	padding:  50px;
 	margin:  50px auto;
 	border:  1px solid rgba(var(--acc2), .7);
@@ -100,4 +100,42 @@ a, a:link, a:active, a:visited, a:hover {
 
 .f-but a {
 	color: rgba(var(--white), 1);
+}
+
+.c-list, .h-list {
+	width: 100%;
+	padding:  30px;
+	border:  1px solid rgba(var(--darkgrey), .2);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: auto;
+	border-radius:  5px;
+	margin-top: 50px;
+} 
+
+.h-list {
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.c-head, .h-head {
+	padding:  20px;
+	background-color: rgba(var(--lightgrey), 1);
+	border-bottom: 1px solid rgba(var(--acc1), 1);
+	font: 700 18px/100% var(--font1);
+}
+
+.c-entry, .h-entry {
+	width: 100%;
+	padding:  20px;
+}
+
+.c-entryg, .h-entryg {
+	grid-column: 1 / 5;
+	width:  100%;
+	height:  1px;
+	background-color: rgba(var(--darkgrey), .2);
+}
+
+.h-entryg {
+	grid-column: 1 / 7;
 }

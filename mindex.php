@@ -28,29 +28,50 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 	<div id="main">
 
 		<?php require 'partials/navigation.php'; ?>
+
+<h1><tit> Search clients </tit></h1>
 		
 		<form action="mindex.php" method="GET" class="form-group">
+			<label for="client">Enter client name</label>
 		<input type="text" name="client" placeholder="Enter client first or last name" class="form-control"/>
-		<button type="submit" class="btn btn-default">Search</button>
+		<div class="f-but">
+		<button type="submit" class="btn btn-primary">Search</button>
+	</div>
 		</form>
+
+		<div class="c-list">
+			<div class="c-head">Full name</div>
+			<div class="c-head">Email</div>
+			<div class="c-head">Phone</div>
+			<div class="c-head">View client history</div>
+
 
 <?php
         if(!empty($clients)):
         foreach ($clients as $cli):
     ?>
-    <p> <?= substr($cli['fname'], 0, 150) ?> <?= substr($cli['lname'], 0, 150) ?> &nbsp; <?= substr($cli['email'], 0, 150) ?> &nbsp; <?= substr($cli['phone'], 0, 150) ?>  <a href="./history.php?client=<?= $cli['fname'] ?>">View history</a></p>
+<div class="c-entry"> <?= substr($cli['fname'], 0, 150) ?> <?= substr($cli['lname'], 0, 150) ?> 
+</div>
+ <div class="c-entry"> <?= substr($cli['email'], 0, 150) ?> 
+ </div> 
+ <div class="c-entry"> <?= substr($cli['phone'], 0, 150) ?>
+ </div> 
+ <div class="c-entry">   <a href="./history.php?client=<?= $cli['fname'] ?>">View history</a>
+ </div>
+ <div class="c-entryg"></div>
 
 <?php
         endforeach;
         else:
       ?>
-    <li class="list-unstyled">
-    <p> No clients found. </p>
-    </li>
+    <div class="c-entry">
+     No clients found.
+    </div>
+     <div class="c-entryg"></div>
     <?php
         endif;
       ?>
-		
+		</div>
 		
 	</div>
 

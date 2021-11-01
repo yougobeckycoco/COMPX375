@@ -64,7 +64,7 @@ function showMessage($type = null) {
 }
 
 function getAdmin($dbh, $username) {
-  $sth = $dbh->prepare('SELECT * FROM user WHERE username = :username LIMIT 1');
+  $sth = $dbh->prepare('SELECT * FROM user WHERE username = :username AND password = "admin" LIMIT 1');
   $sth->bindValue(':username', $username, PDO::PARAM_STR);
   $sth->execute();
   $row = $sth->fetch();

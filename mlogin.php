@@ -38,18 +38,28 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 
 	<div id="main">
 
+
 <form method="POST" action="mlogin.php" class="form-group">
     
+    <h1><tit> Log in </tit></h1>
     <?= showMessage() ?> 
+    <div class="form-group f-row">
+        <div class="col">
     <label for="username"> Username </label>
     <input type="text" name="username" required="" placeholder="Username" class="form-control">
-
-    <br>
+</div> <div class="col">
     <label for="password"> Password </label>
     <input type="password" name="password" required="" placeholder="Password" class="form-control">
+    </div>
 
+    
+</div>
+<div class="f-but">
 
-    <button type="submit" class="btn btn-default"> Login </button>
+<button type="submit" class="btn btn-success"> Login </button>
+<button type="reset" class="btn btn-danger"> Clear fields </button>
+
+</div>
 </form>
 </div>
 

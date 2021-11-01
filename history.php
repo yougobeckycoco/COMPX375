@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>NIM - History of clients</title>
+	<title>NIM - History of reviews</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -25,31 +25,51 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 
 	<div id="main">
 
-
 		<?php require 'partials/navigation.php'; ?>
 
+		<h1><tit> History of reviews </tit></h1>
+
 		<form action="history.php" method="GET" class="form-group">
+			<label for="client">Enter client name</label>
 		<input type="text" name="client" placeholder="Enter client first or last name" class="form-control"/>
-		<button type="submit" class="btn btn-default">Search</button>
+		<div class="f-but"><button type="submit" class="btn btn-primary">Search</button></div>
 		</form>
+
+
 		
+		<div class="h-list">
+			<div class="h-head">Full name</div>
+			<div class="h-head">Address</div>
+			<div class="h-head">Damage</div>
+			<div class="h-head">Payment</div>
+			<div class="h-head">Tidiness</div>
+			<div class="h-head">Comment</div>
+
 		<?php
       if(!empty($clients)):
         foreach ($clients as $cli):
     ?>
-    <p> <?= substr($cli['fname'], 0, 150) ?> <?= substr($cli['lname'], 0, 150) ?> &nbsp; <?= substr($cli['address'], 0, 150) ?> &nbsp; <?= substr($cli['damage_rating'], 0, 150) ?> &nbsp; <?= substr($cli['payment_rating'], 0, 150) ?> &nbsp; <?= substr($cli['tidiness_rating'], 0, 150) ?>  &nbsp; <?= substr($cli['comment'], 0, 150) ?>   </p>
+    <div class="h-entry"> <?= substr($cli['fname'], 0, 150) ?> <?= substr($cli['lname'], 0, 150) ?> </div>
+    <div class="h-entry"> <?= substr($cli['address'], 0, 150) ?> </div>
+    <div class="h-entry"> <?= substr($cli['damage_rating'], 0, 150) ?> out of 5 </div>
+    <div class="h-entry"> <?= substr($cli['payment_rating'], 0, 150) ?> out of 5 </div>
+    <div class="h-entry"> <?= substr($cli['tidiness_rating'], 0, 150) ?> out of 5 </div>
+    <div class="h-entry"> <?= substr($cli['comment'], 0, 150) ?>   </div>
+
+    <div class="h-entryg"></div>
 
 <?php
         endforeach;
         else:
       ?>
-    <li class="list-unstyled">
-    <p> No reviews found. </p>
-    </li>
+    <div class="h-entry">
+     No reviews.
+    </div>
+     <div class="h-entryg"></div>
     <?php
         endif;
       ?>
-
+</div>
 
 	</div>
 
