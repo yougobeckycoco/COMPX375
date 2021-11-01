@@ -14,16 +14,19 @@
 	<div id="main">
 
 		<?php require 'partials/nav.php'; ?>
-		<p>Showing results for destination, date to date, house type, # people, # rooms, $## to $##</p>
-		<a>Sort by low to high</a>
+
+		<h1><tit> Show results </tit></h1>
+		<h6>Showing results: for Hillcrest, 5/11/2021 to 10/12/2021, House, 4 people, 2 rooms, $50 to $550</h6>
+		<a class="filter">Sort by low to high</a>
 
 		<div id="results">
 			
 			<div class="result">
-				<img src="http://placehold.it/200">
-				<a href="viewproperty.php">link to result</a>
-				<div class="stats"><h2>Hillcrest, 3216</h2>
-					<p>4 people, 2 bedrooms</p>
+				<div class="rpic"><img src="http://placehold.it/300x200">
+					<div class="rbk"><a href="viewproperty.php" class="rmore">More information</a></div>
+				</div>
+				<div class="stats"><h2><tit>Hillcrest, 3216</tit></h2>
+					<p><b>4</b> people, <b>2</b> bedrooms</p>
 					<price>$450 per week</price>
 			</div>
 
