@@ -29,11 +29,11 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 
 		<?= require 'partials/navigation.php'; ?>
 
+
 		
 		<form action="mindex.php" method="GET" class="form-group">
 		<input type="text" name="client" placeholder="Enter client first or last name" class="form-control"/>
 		<button type="submit" class="btn btn-default">Search</button>
-		</form>
 
 <?php
       if(!empty($clients)):
@@ -54,6 +54,5 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 		
 		
 	</div>
-
 </body>
 </html>

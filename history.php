@@ -5,7 +5,6 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 	$client = e($_GET['client']);
 	if (!empty($client)) {
 		$clients = searchHistory($dbh, $client);
-	}
 	else{
 		$clients = '';
 	}
@@ -30,12 +29,13 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 		<form action="history.php" method="GET" class="form-group">
 		<input type="text" name="client" placeholder="Enter client first or last name" class="form-control"/>
 		<button type="submit" class="btn btn-default">Search</button>
-		</form>
+
 		
 		<?php
       if(!empty($clients)):
         foreach ($clients as $cli):
     ?>
+
     <p> <?= substr($cli['fname'], 0, 150) ?> <?= substr($cli['lname'], 0, 150) ?> &nbsp; <?= substr($cli['address'], 0, 150) ?> &nbsp; <?= substr($cli['damage_rating'], 0, 150) ?> &nbsp; <?= substr($cli['payment_rating'], 0, 150) ?> &nbsp; <?= substr($cli['tidiness_rating'], 0, 150) ?>  &nbsp; <?= substr($cli['comment'], 0, 150) ?>   </p>
 
 <?php
