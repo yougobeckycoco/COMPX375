@@ -9,21 +9,23 @@
 </head>
 <body>
 
-<?php require 'partials/nav.php'; ?>
+
 
 <div id="main">
+
+	<?php require 'partials/nav.php'; ?>
 	
-	<h1>Welcome, first last</h1>
+	<h1>Welcome,</h1>
 
-	<form action="csearchresults.php" method="POST">
+	<form action="csearchresults.php" method="POST" class="form-group">
 
-		<input type="text" name="destination" id="destination" placeholder="Enter destination">
+		<input type="text" name="destination" id="destination" placeholder="Enter destination" class="form-control">
 		<label for="checkin">Check in date</label>
-		<input type="date" name="checkin" id="checkin">
+		<input type="date" name="checkin" id="checkin" class="form-control">
 		<label for="checkout">Check out date</label>
-		<input type="date" name="checkout" id="checkout">
+		<input type="date" name="checkout" id="checkout" class="form-control">
 
-		<button>Search</button>
+		<button type="submit" class="btn btn-default"> Search </button>
 
 	</form>
 
