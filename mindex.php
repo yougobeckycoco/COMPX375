@@ -40,7 +40,6 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
         foreach ($clients as $cli):
     ?>
     <p> <?= substr($cli['fname'], 0, 150) ?> <?= substr($cli['lname'], 0, 150) ?> &nbsp; <?= substr($cli['email'], 0, 150) ?> &nbsp; <?= substr($cli['phone'], 0, 150) ?>  <a href="./history.php?client=<?= $cli['fname'] ?>">View history</a></p>
-
 <?php
         endforeach;
         else:
@@ -54,6 +53,5 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 		
 		
 	</div>
-
 </body>
 </html>
