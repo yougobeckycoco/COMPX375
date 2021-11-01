@@ -52,6 +52,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 </div> <div class="col">
     <label for="password"> Password </label>
     <input type="password" name="password" required="" placeholder="Password" class="form-control">
+
     </div>
     <div class="col">
 
@@ -60,3 +61,5 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 </div>
 </form>
 </div>
+</body>
+</html>

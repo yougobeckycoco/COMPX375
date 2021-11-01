@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 	<div id="main">
 	<?= require 'partials/nav.php'; ?>
 
@@ -19,6 +20,7 @@
 		<input type="text" name="destination" id="destination" placeholder="Enter destination" class="form-control">
 		<br>
 		<label for="checkin">Dates:</label>
+
 		<input type="date" name="checkin" id="checkin" class="form-control"> <label>to</label> <input type="date" name="checkout" id="checkout" class="form-control">
 		<br>
 		<label for="housetype">House type:</label>
@@ -35,6 +37,7 @@
 		<input type="number" name="rooms" id="rooms" class="form-control">
 		<br>
 		<label for="mincost">Price range:</label>
+
 		<input type="number" name="mincost" id="mincost" class="form-control"> <label>to</label> <input type="number" name="maxcost" id="maxcost" class="form-control">
 		<br>
 		<button type="submit" class="btn btn-primary"> Search for property </button>

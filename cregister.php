@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	<div id="main">
 
+
 		<h1><tit> Register </tit></h1>
 	<?= showMessage(); ?>
 		<form method="POST" action="cregister.php" onsubmit="return validate()" class="form-group">
@@ -75,6 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<label for="confirm-password"> Confirm Password </label>
 	<input id="confirm-password" type="password" name="confirm-password" required="" placeholder="Confirm Password" class="form-control">
 	
+
 	<button type="submit" class="btn btn-primary"> Register </button>
 </form>
 </div>

@@ -15,6 +15,7 @@
 
 	<?php require 'partials/nav.php'; ?>
 	
+
 	<h1><tit>Welcome</tit></h1>
 
 	<form action="csearchresults.php" method="POST">
