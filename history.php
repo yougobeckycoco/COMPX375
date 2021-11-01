@@ -5,6 +5,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 	$client = e($_GET['client']);
 	if (!empty($client)) {
 		$clients = searchHistory($dbh, $client);
+		$clients = searchClient($dbh, $client);
 	}
 	else{
 		$clients = '';
@@ -26,7 +27,6 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 	<?= require 'partials/navigation.php'; ?>
 
 	<div id="main">
-
 		<form action="history.php" method="GET">
 		<input type="text" name="client" placeholder="Enter client first or last name" />
 		<button>Search</button>
@@ -37,6 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
         foreach ($clients as $cli):
     ?>
     <p> <?= substr($cli['fname'], 0, 150) ?> <?= substr($cli['lname'], 0, 150) ?> &nbsp; <?= substr($cli['damage_rating'], 0, 150) ?> &nbsp; <?= substr($cli['payment_rating'], 0, 150) ?> &nbsp; <?= substr($cli['tidiness_rating'], 0, 150) ?>  </p>
+    <h1> lol </h1>
 
 <?php
         endforeach;

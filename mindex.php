@@ -29,7 +29,6 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 
 		<?= require 'partials/navigation.php'; ?>
 
-		
 		<form action="mindex.php" method="GET">
 		<input type="text" name="client" placeholder="Enter client first or last name" />
 		<button>Search</button>
@@ -54,6 +53,5 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 		
 		
 	</div>
-
 </body>
 </html>
