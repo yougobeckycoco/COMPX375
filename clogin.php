@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = strtolower($_POST['password']);
     $user = getUser($dbh, $username);
 
-    if(!empty($user) && ($username === strtolower($user['username']) || $username === strtolower($user['email'])) && password_verify($password, $user['password'])) {
+    if(!empty($user) && ($username === strtolower($user['username']) || $username === strtolower($user['email'])) && $password === strtolower($user['password'])) {
         $_SESSION['username'] = $user['username'];
         $_SESSION['email'] = $user['email'];
         addMessage('success', 'You have been logged in.');
@@ -34,10 +34,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
-	<title>NIM Management - Client Login</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="./css/main.css">
-
 </head>
 <body>
 
@@ -55,10 +51,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     <label for="password"> Password </label>
     <input type="password" name="password" required="" placeholder="Password" class="form-control">
     <br>
-
-
-    <label for="password"> Password </label>
-    <input type="password" name="password" required="" placeholder="Password" class="form-control">
 
 
     <button type="submit" class="btn btn-default"> Login </button>
