@@ -49,6 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	<div id="main">
 
+
 		<h1><tit> Register </tit></h1>
 	<?= showMessage(); ?>
 		<form method="POST" action="cregister.php" onsubmit="return validate()">
@@ -84,6 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<button type="submit" class="btn btn-success"> Register </button>
 	<button type="reset" class="btn btn-danger"> Clear fields </button>
 </div>
+
 </form>
 </div>
 <script src="js/main.js"></script>

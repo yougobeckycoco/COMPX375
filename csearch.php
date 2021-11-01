@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 	<div id="main">
 	<?php require 'partials/nav.php'; ?>
 
@@ -26,6 +27,7 @@
 			<label for="checkout">Check out:</label>
 			<input type="date" name="checkout" id="checkout" class="form-control"></div></div>
 		
+
 		<label for="housetype">House type:</label>
 		<select name="housetype" id="housetype" class="form-control">
 			<option value="apartment">Apartment</option>
@@ -36,6 +38,7 @@
 		<div class="form-group f-row">
 			<div class="col">
 		<label for="people">Number of people:</label>
+
 		<input type="number" name="people" id="people" class="form-control" placeholder="1-10" min="1" max="10">
 	</div><div class="col">
 		<label for="rooms">Number of bedrooms:</label>
@@ -53,6 +56,7 @@
 		<button type="submit" class="btn btn-primary"> Search for property </button>
 		<button type="reset" class="btn btn-danger"> Clear fields </button>
 	</div>
+
 
 	</form>
 

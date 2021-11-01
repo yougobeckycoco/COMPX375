@@ -19,6 +19,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 
 	<div id="main">
 
+
 	<?php require 'partials/navigation.php'; ?>
 
 	<form method="POST" action="reviewclient.php" class="form-group">

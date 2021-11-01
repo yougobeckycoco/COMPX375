@@ -25,6 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 
 	<div id="main">
 
+
 		<?php require 'partials/navigation.php'; ?>
 
 		<form action="history.php" method="GET" class="form-group">

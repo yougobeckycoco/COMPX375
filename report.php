@@ -9,6 +9,7 @@
 </head>
 <body>
 
+
 	<?php require 'partials/navigation.php'; ?>
 
 </body>

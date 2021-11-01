@@ -15,7 +15,6 @@
 
 	<?php require 'partials/nav.php'; ?>
 	
-	<h1><tit>Welcome</tit></h1>
 
 	<form action="csearchresults.php" method="POST">
 <div class="form-group f-row">
@@ -29,6 +28,7 @@
 	</div><div class="col">
 		<label for="checkout">Check out date</label>
 		<input type="date" name="checkout" id="checkout" class="form-control">
+
 	</div></div>
 	
 
@@ -36,10 +36,14 @@
 	<button type="submit" class="btn btn-primary"> Search for properties </button>
 </div>
 	
+	</div>
+	
+</div>
 
 	</form>
 
 	<h1><tit>Current reservations</tit></h1>
+
 	<p>Currently none</p>
 </div>
 
