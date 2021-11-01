@@ -50,3 +50,34 @@ function showMessage($type = null) {
   }
   return $messages;
 }
+
+function getAdmin($dbh, $username) {
+  $sth = $dbh->prepare('SELECT * FROM user WHERE username = :username LIMIT 1');
+  $sth->bindValue(':username', $username, PDO::PARAM_STR);
+  $sth->execute();
+  $row = $sth->fetch();
+  if (!empty($row)) {
+    return $row;
+}
+  }
+  return false;
+
+function searchClient($dbh, $search) {
+  $sth = $dbh->prepare("SELECT * FROM user WHERE lname = :search OR fname = :search");
+  $sth->bindValue(':search', $search, PDO::PARAM_STR);
+  $sth->execute();
+  $result = $sth->fetchAll();
+  return $result;
+}
+
+function e($value) {
+  return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+}
+
+function searchHistory($dbh, $search) {
+  $sth = $dbh->prepare("SELECT user.username, user.fname, user.lname, client_rating.username, client_rating.damage_rating, client_rating.payment_rating, client_rating.tidiness_rating, client_rating.comment, client_rating.property_id, property.address FROM client_rating INNER JOIN user ON client_rating.username = user.username INNER JOIN property ON client_rating.property_id = property.property_id WHERE user.lname = :search OR user.fname = :search");
+  $sth->bindValue(':search', $search, PDO::PARAM_STR);
+  $sth->execute();
+  $result = $sth->fetchAll();
+  return $result;
+}

@@ -13,11 +13,11 @@ body {
 
 	--font1:  'Open Sans', sans-serif;
 
-	font:  400 13px/120% var(--font1);
+	font:  400 14px/120% var(--font1);
 }
 
 #main {
-	width:  60%;
+	width:  90%;
 	padding:  50px;
 	margin:  20px auto;
 	border:  1px solid rgba(var(--darkgrey), .7);
