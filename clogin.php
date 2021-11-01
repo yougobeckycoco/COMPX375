@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = strtolower($_POST['password']);
     $user = getUser($dbh, $username);
 
-    if(!empty($user) && ($username === strtolower($user['username']) || $username === strtolower($user['email'])) && password_verify($password, $user['password'])) {
+    if(!empty($user) && ($username === strtolower($user['username']) || $username === strtolower($user['email'])) && $password === strtolower($user['password'])) {
         $_SESSION['username'] = $user['username'];
         $_SESSION['email'] = $user['email'];
         addMessage('success', 'You have been logged in.');
@@ -34,33 +34,34 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
-	<title>NIM Management - Client Login</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="./css/main.css">
-
 </head>
 <body>
 
 <div id="main">
 
-<form method="POST" action="clogin.php" class="form-group">
+<form method="POST" action="clogin.php">
 
-    <h1> Log In </h1>
+    <h1><tit> Log In </tit></h1>
     
     <?= showMessage() ?> 
+
+    <div class="form-group f-row">
+        <div class="col">
     <label for="username"> Username/Email </label>
     <input type="text" name="username" required="" placeholder="Username/Email" class="form-control">
-
-    <br>
+</div> <div class="col">
     <label for="password"> Password </label>
     <input type="password" name="password" required="" placeholder="Password" class="form-control">
-    <br>
+    </div>
 
+    
+</div>
+<div class="f-but">
 
-    <label for="password"> Password </label>
-    <input type="password" name="password" required="" placeholder="Password" class="form-control">
+<a href="cregister.php" class="btn btn-primary"> Register </a>
+<button type="submit" class="btn btn-success"> Login </button>
+<button type="reset" class="btn btn-danger"> Clear fields </button>
 
-
-    <button type="submit" class="btn btn-default"> Login </button>
+</div>
 </form>
 </div>
