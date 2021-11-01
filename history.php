@@ -36,6 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
       if(!empty($clients)):
         foreach ($clients as $cli):
     ?>
+
     <p> <?= substr($cli['fname'], 0, 150) ?> <?= substr($cli['lname'], 0, 150) ?> &nbsp; <?= substr($cli['address'], 0, 150) ?> &nbsp; <?= substr($cli['damage_rating'], 0, 150) ?> &nbsp; <?= substr($cli['payment_rating'], 0, 150) ?> &nbsp; <?= substr($cli['tidiness_rating'], 0, 150) ?>  &nbsp; <?= substr($cli['comment'], 0, 150) ?>   </p>
 
 <?php
