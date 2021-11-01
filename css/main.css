@@ -139,3 +139,10 @@ a, a:link, a:active, a:visited, a:hover {
 .h-entryg {
 	grid-column: 1 / 7;
 }
+
+.form-b {
+	width:  100%;
+	height:  1px;
+	background-color: rgba(var(--darkgrey), .2);
+	margin: 20px 0;
+}
