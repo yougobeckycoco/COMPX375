@@ -23,11 +23,8 @@ require 'includes/config.php';
 		<form action="history.php" method="GET">
 		<input type="text" name="client" placeholder="Enter client first or last name" />
 		<button>Search</button>
-		</form>
-
 		
 		
 	</div>
-
 </body>
 </html>
