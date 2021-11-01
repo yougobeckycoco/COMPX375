@@ -9,25 +9,35 @@
 </head>
 <body>
 
-<?php require 'partials/nav.php'; ?>
+
 
 <div id="main">
+
+	<?php require 'partials/nav.php'; ?>
 	
-	<h1>Welcome, first last</h1>
+	<h1><tit>Welcome</tit></h1>
 
 	<form action="csearchresults.php" method="POST">
-
-		<input type="text" name="destination" id="destination" placeholder="Enter destination">
+<div class="form-group f-row">
+		
+			<div class="col">
+				<label for="destination">Enter destination</label>
+		<input type="text" name="destination" id="destination" placeholder="Enter destination" class="form-control">
+	</div><div class="col">
 		<label for="checkin">Check in date</label>
-		<input type="date" name="checkin" id="checkin">
+		<input type="date" name="checkin" id="checkin" class="form-control">
+	</div><div class="col">
 		<label for="checkout">Check out date</label>
-		<input type="date" name="checkout" id="checkout">
+		<input type="date" name="checkout" id="checkout" class="form-control">
+	</div>
+	
+</div>
 
-		<button>Search</button>
+	<button type="submit" class="btn btn-primary"> Search for properties </button>
 
 	</form>
 
-	<h1>Current reservations</h1>
+	<h1><tit>Current reservations</tit></h1>
 	<p>None</p>
 </div>
 
