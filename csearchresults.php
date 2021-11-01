@@ -31,6 +31,20 @@
 			</div>
 
 		</div>
+
+
+
+
+		<div class="result">
+				<div class="rpic"><img src="http://placehold.it/300x200">
+					<div class="rbk"><a class="rmore">More information</a></div>
+				</div>
+				<div class="stats"><h2><tit>Hillcrest, 3216</tit></h2>
+					<p><b>3</b> people, <b>2</b> bedrooms</p>
+					<price>$350 per week</price>
+			</div>
+
+		</div>
 	</div>
 
 </body>

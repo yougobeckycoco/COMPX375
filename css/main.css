@@ -60,7 +60,7 @@ a, a:link, a:active, a:visited, a:hover {
 }
 
 #main h1 {
-	font:  700 60px/100% var(--font1);
+	font:  800 60px/100% var(--font1);
 	margin: 40px 0;
 	letter-spacing: -2px;
 }
@@ -171,6 +171,7 @@ h6 {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto;
 	gap:  10px;
+	place-items: center;
 }
 
 .result {
@@ -240,4 +241,54 @@ h6 {
 	margin-top:  -20px;
 	padding:  0 10px 10px 0;
 	font:  italic 400 12px/100% var(--font1);
+}
+
+.info {
+	width:  100%;
+	padding:  30px;
+	border:  1px solid rgba(var(--darkgrey), .2);
+	margin-top:  30px;
+}
+
+#main .info h1 {
+	margin: 0 0 10px 0;
+}
+
+.info h4 {
+	font: 700 30px/100% var(--font1);
+	margin: -5px 0 20px 10px;
+	letter-spacing: -1px;
+}
+
+.info p {
+	padding: 20px;
+	background-color: rgba(var(--lightgrey), 1);
+	border:  1px solid rgba(var(--darkgrey), .2);
+}
+
+.gallery img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.float-right {
+	float: right;
+	clear: both;
+	padding:  10px;
+	border-radius: 5px;
+	background-color: rgba(var(--lightgrey), .3);
+	border:  1px solid rgba(var(--darkgrey), .2);
+	margin-top: 5px;
+	text-align: center;
+	margin-right: 10px;
+}
+
+.float-right em {
+	display: block;
+	background: linear-gradient(60deg, rgba(var(--acc1), .4) 0%, rgba(var(--acc2), .4) 100%);
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    font:  italic 400 16px/100% var(--font1);
+    margin-bottom: 5px;
 }
